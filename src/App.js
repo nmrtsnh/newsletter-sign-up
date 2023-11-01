@@ -9,8 +9,6 @@ export default function App() {
   const [dismissed, setDismissed] = useState(false);
   const [errorMsg, setErrorMsg] = useState("");
 
-  // console.log("Email:", email);
-
   function handleFormSubmit(e) {
     e.preventDefault();
 
@@ -24,7 +22,7 @@ export default function App() {
 
   function isValidEmail(email) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    // console.log(emailRegex);
+
     return emailRegex.test(email);
   }
 
@@ -80,9 +78,7 @@ export default function App() {
           <img src={MySvg} alt="illustration" />
         </div>
       </div>
-      <div
-        className={`success-container container ${showSuccess ? "" : "hidden"}`}
-      >
+      <div className={`success-container ${showSuccess ? "" : "hidden"}`}>
         <img className="icon-success" src={IconList} alt="icon" />
         <h2 className="heading-2">Thanks for subscribing!</h2>
         <p className="text">
